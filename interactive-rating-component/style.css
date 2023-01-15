@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--VeryDarkBlue);
+  margin: 0;
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--DarkBlue);
+  border-radius: 20px;
+  width: 450px;
+  padding: 20px 40px;
+
+  /* Toggle this */
+  /* display: none; */
+}
+
+.container h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.container p {
+  color: var(--LightGrey);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  margin-top: 20px;
+  background-color: #3d444d;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.rating {
+  height: 50px;
+  width: 50px;
+  background-color: #3d444d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rating:hover {
+  background-color: var(--MediumGrey);
+}
+
+.rating.active {
+  color: var(--White);
+  background-color: var(--Orange);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  background-color: var(--Orange);
+  color: var(--White);
+  height: 30px;
+  padding: 20px 20px;
+  font-size: 15px;
+  width: 100%;
+  margin-top: 15px;
+  font-family: 'Overpass', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 15px;
+  transition: all 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  color: var(--Orange);
+  background-color: var(--White);
+}
+
+/* Thnak you card */
+.thankyou-container {
+  background-color: var(--DarkBlue);
+  border-radius: 20px;
+  width: 450px;
+  padding: 20px 40px;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks-icon {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.thankyou-container h1 {
+  margin: 0;
+  margin-top: 25px;
+}
+
+.item-container {
+  background-color: #3d444d;
+  color: var(--Orange);
+  margin-top: 8px;
+  border-radius: 15px;
+}
+
+.item-container p {
+  margin: 0;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.thankyou-container > p {
+  color: var(--MediumGrey);
+  text-align: center;
+  font-size: 16.5px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 350px;
+    padding: 10px 15px;
+  }
+
+  .container p {
+    line-height: 1.2;
+  }
+
+  .thankyou-container {
+    width: 350px;
+    padding: 10px 15px;
+  }
+}
